@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# build output
+lib/
+*.tgz
+
+# local npm auth (never commit tokens)
+.npmrc
+
+# local harness/dev scratch
+*.local
+*.log
+debug-stream.json
