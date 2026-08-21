@@ -1,0 +1,12 @@
+# dsh-tanqi bundle patch: inserts the plugin row into the web profile roster.
+# Applied as a profile bundle layer (the `dsh.bundle.patch` manifest field)
+# over dsh-base; activate with
+# `dsh plugin --profile <name> add link:~/code/dsh-tanqi` (or npm publish first).
+#
+# The row is a bare plugin by package name: the node half (exports ".") runs
+# in the host process (LLM routes + the system-prompt announcement section),
+# and the `dsh.client` declaration in package.json makes the browser half
+# (exports "./client", served at /plugins/<id>/client.js) load in the web GUI.
+- insert:
+    - id: tanqi
+      name: '@lastplayer82/dsh-tanqi'
